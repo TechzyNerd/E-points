@@ -1,0 +1,55 @@
+:root{
+  --bg:#f7fbff;
+  --card:#ffffff;
+  --accent:#2d9cdb;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, Arial;
+  background:var(--bg);
+  color:#111;
+}
+.container{
+  width:960px;
+  max-width:96%;
+  margin:28px auto;
+  text-align:center;
+}
+h1{margin-bottom:14px}
+.card{
+  background:var(--card);
+  border-radius:10px;
+  padding:18px;
+  box-shadow:0 8px 20px rgba(20,30,60,0.08);
+  margin-bottom:18px;
+}
+label{display:block;text-align:left;margin:8px 0 4px;font-weight:600}
+input[type="text"], input[type="password"], input[type="number"]{
+  width:100%;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #e3e8ef;
+  font-size:15px;
+}
+button{
+  background:var(--accent);
+  color:white;
+  border:0;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:700;
+}
+button:hover{opacity:0.95}
+.row{display:flex;gap:10px;justify-content:center;margin-top:10px}
+.hidden{display:none}
+.msg{color:var(--muted);margin-top:10px}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th, td{padding:8px;border-bottom:1px solid #f0f2f6;text-align:left}
+.actionBtn{
+  background:#444;color:#fff;padding:6px 8px;border-radius:6px;border:0;cursor:pointer;font-size:13px
+}
+.actionBtn.edit{background:#2ecc71}
+.actionBtn.delete{background:#ff6b6b}

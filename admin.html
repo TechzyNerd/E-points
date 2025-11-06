@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Mosque Leaderboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Panel</h1>
+
+    <div id="loginBox" class="card">
+      <h2>Admin Login</h2>
+      <label>Username</label>
+      <input id="username" type="text" autocomplete="username" />
+      <label>Password</label>
+      <input id="password" type="password" autocomplete="current-password" />
+      <button id="loginBtn">Login</button>
+      <p id="loginMsg" class="msg"></p>
+    </div>
+
+    <div id="adminBox" class="card hidden">
+      <h2>Manage Students</h2>
+      <form id="studentForm">
+        <label>Student Name</label>
+        <input id="studentName" type="text" required />
+        <label>Points</label>
+        <input id="studentPoints" type="number" required />
+        <input type="hidden" id="rowIndex" value="" />
+        <div class="row">
+          <button id="addBtn" type="button">Add Student</button>
+          <button id="updateBtn" type="button">Update Selected</button>
+          <button id="logoutBtn" type="button">Logout</button>
+        </div>
+      </form>
+
+      <h3>Existing Students</h3>
+      <table id="studentsTable">
+        <thead><tr><th>#</th><th>Name</th><th>Points</th><th>Action</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <p id="adminMsg" class="msg"></p>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
